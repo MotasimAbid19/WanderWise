@@ -1,0 +1,116 @@
+/* Header Styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #c5cee6; /* Blueish background from logo */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 5%;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 100%;
+}
+
+/* Fix Header Overlap */
+body {
+    padding-top: 90px; /* Adjust based on header height */
+}
+
+/* Header Scroll Effect */
+.header.scrolled {
+    background: #4A505D; /* Slightly darker on scroll */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Logo */
+.header .logo img {
+    height: 70px; /* Adjusted to fit well */
+    transition: transform 0.3s ease-in-out;
+}
+
+.header .logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Navbar */
+.header .navbar {
+    display: flex;
+    align-items: center;
+}
+
+.header .navbar a {
+    font-size: 1.6rem;
+    margin-left: 2rem;
+    color: var(--black);
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+}
+
+.header .navbar a:hover {
+    color: var(--tomato);
+}
+
+/* Mobile Menu Button */
+#menu-btn {
+    font-size: 2.2rem;
+    cursor: pointer;
+    color: var(--black);
+    display: none;
+    transition: 0.3s ease-in-out;
+}
+
+#menu-btn:hover {
+    color: var(--tomato);
+}
+
+/* Responsive Navbar */
+@media (max-width: 1024px) {
+    .header {
+        padding: 1.2rem 4%;
+    }
+
+    .header .navbar a {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Show menu button */
+    #menu-btn {
+        display: inline-block;
+    }
+
+    /* Hide navbar initially */
+    .header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #4A505D; /* Darker shade for mobile menu */
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        text-align: center;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    /* Show navbar when active */
+    .header .navbar.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .header .navbar a {
+        margin: 1.5rem 0;
+        font-size: 1.6rem;
+        display: block;
+        color: var(--white);
+    }
+}

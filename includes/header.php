@@ -1,28 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WanderWise</title>
-    <link rel="stylesheet" href="/WanderWise/assets/css/global.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>WanderWise</h1>
-            <nav>
-                <ul>
-                    <li><a href="/WanderWise/views/home.php">Home</a></li>
-                    <li><a href="/WanderWise/views/search.php">Search</a></li>
-                    <li><a href="/WanderWise/views/booking.php">Book Tickets</a></li>
-                    <li><a href="/WanderWise/views/restaurant_finder.php">Restaurants</a></li>
-                    <li><a href="/WanderWise/views/vehicle_rental.php">Rent Vehicle</a></li>
-                    <li><a href="/WanderWise/views/review.php">Reviews</a></li>
-                    <li><a href="/WanderWise/views/profile.php">Profile</a></li>
-                    <li><a href="/WanderWise/views/history.php">History</a></li>
-                    <li><a href="/WanderWise/views/faqs.php">FAQs</a></li>
-                    <li><a href="/WanderWise/views/contact_us.php">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<?php
+session_start();
+?>
+<header class="header">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+
+    
+    <div class="logo">
+        <a href="home.php">
+            <img src="../assets/images/logo.png" alt="WanderWise Logo">
+        </a>
+    </div>
+
+    <nav class="navbar">
+        <a href="../views/home.php">Home</a>
+        <a href="../views/about.php">About</a>
+        <a href="../views/packages.php">Packages</a>
+        <a href="../views/booking.php">Booking</a>
+        <a href="../views/nearby.php">Nearby Facilities</a>
+        <a href="../views/faqs.php">FAQs</a>
+
+        <?php if(isset($_SESSION['user_id'])): ?>
+            <a href="../views/profile.php">Profile</a>
+            <a href="../controllers/logout.php">Logout</a>
+        <?php else: ?>
+            <a href="../views/login.php">Login</a>
+        <?php endif; ?>
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+</header>

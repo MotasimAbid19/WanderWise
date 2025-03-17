@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root {
+    --main-color: #c5cee6; /* Matching the theme color */
+    --black: #222;
+    --white: #fff;
+    --tomato: #fd5e42;
+    --light-black: #777;
+    --light-white: rgba(255, 255, 255, 0.9);
+    --dark-bg: rgba(0,0,0,.7);
+    --light-bg: #eee;
+    --border: .1rem solid var(--main-color);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    --text-shadow: 0 1.5rem 3rem rgba(0,0,0,.3);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+
+/* Video Section */
+.home-video {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Background Video */
+.banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Home Banner Section */
+.home-banner {
+    padding: 5rem 10%;
+    text-align: center;
+    background: var(--main-color); /* Matching website theme */
+    position: relative;
+}
+
+/* Dark Overlay for Better Readability */
+.home-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Slightly lighter for better text contrast */
+    z-index: 1;
+}
+
+/* Banner Content */
+.banner {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.15); /* Slight transparency */
+    color: var(--black); /* Changed the color to black */
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Banner Text */
+.banner h1 {
+    font-size: 4rem;
+    text-shadow: var(--text-shadow);
+    animation: slideInDown 1.5s ease-in-out;
+    color: var(--black); /* Changed text color to black */
+}
+
+.banner h1 span {
+    color: var(--tomato);
+}
+
+.banner p {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    animation: slideInUp 1.5s ease-in-out;
+    color: var(--black); /* Changed text color to black */
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    background: var(--tomato);
+    color: var(--white);
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: var(--black);
+    transform: scale(1.05);
+}
+
+/* Packages Section */
+.packages {
+    padding: 5rem 10%;
+    text-align: center;
+    background: var(--main-color); /* Matching home banner color */
+}
+
+.packages h2 {
+    font-size: 2.5rem; /* Adjusted font size for heading */
+    color: var(--black); /* Text color set to black */
+    margin-bottom: 1rem;
+}
+
+.packages p {
+    font-size: 1.6rem;
+    color: var(--black); /* Text color set to black */
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+/* Package List */
+.package-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Show 3 packages */
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+/* Package Card */
+.package {
+    background: var(--main-color);
+    padding: 2rem;
+    color: var(--black); /* Text color set to black */
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    transition: 0.3s;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Package Image */
+.package img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.package:hover {
+    background: var(--tomato);
+    transform: scale(1.05);
+}
+
+.package:hover img {
+    transform: scale(1.1);
+}
+
+/* Cost Styling */
+.package p {
+    font-size: 1.2rem; /* Smaller font size */
+    color: var(--black); /* Changed font color to black */
+}
+
+/* See More Packages Button */
+.see-more-btn {
+    display: inline-block;
+    background: var(--tomato);
+    color: var(--black); /* Text color set to black */
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    text-decoration: none; /* Ensure it's not underlined */
+}
+
+.see-more-btn:hover {
+    background: var(--black);
+    color: var(--white); /* Text color to white on hover */
+    transform: scale(1.05);
+}
+
+/* Facilities Section */
+.facilities {
+    padding: 5rem 10%;
+    background: var(--light-bg);
+    text-align: center;
+}
+
+.facilities h2 {
+    font-size: 3rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.facilities ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.facilities ul li {
+    font-size: 1.8rem;
+}
+
+.facilities ul li a {
+    color: var(--main-color);
+    transition: 0.3s;
+}
+
+.facilities ul li a:hover {
+    color: var(--tomato);
+    text-decoration: underline;
+}
+
+/* FAQs Section */
+.faqs {
+    padding: 5rem 10%;
+    text-align: center;
+    background: var(--white);
+}
+
+.faqs h2 {
+    font-size: 3rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .home-banner {
+        padding: 4rem 8%;
+    }
+
+    .banner h1 {
+        font-size: 3.5rem;
+    }
+
+    .package-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .home-banner {
+        padding: 3rem 5%;
+    }
+
+    .banner {
+        padding: 2rem;
+    }
+
+    .banner h1 {
+        font-size: 3rem;
+    }
+
+    .package-list {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .home-banner {
+        padding: 2rem 3%;
+    }
+
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner p {
+        font-size: 1.4rem;
+    }
+}

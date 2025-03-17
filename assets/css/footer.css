@@ -1,0 +1,156 @@
+/* Footer Styling */
+.footer {
+    background-image: url('../images/footer-bg.jpg') !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 4rem 5%;
+    color: var(--white);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+/* Footer Grid */
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 2rem;
+}
+
+/* Footer Headings */
+.footer .box-container .box h3 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    color: var(--light-white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Footer Links */
+.footer .box-container .box a {
+    font-size: 1.3rem;
+    color: var(--light-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.8rem;
+    transition: 0.3s ease-in-out;
+}
+
+.footer .box-container .box a i {
+    margin-right: 8px;
+    color: var(--tomato);
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.footer .box-container .box a:hover {
+    transform: translateX(8px);
+    color: var(--tomato);
+}
+
+.footer .box-container .box a:hover i {
+    color: var(--white);
+}
+
+/* Footer Credit Section */
+.footer .credit {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 1.5s ease-in-out forwards 0.5s;
+}
+
+/* Footer Credit Highlight */
+.footer .credit .designer {
+    color: var(--tomato);
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-shadow: 0 0 8px rgba(255, 94, 66, 0.8);
+    transition: color 0.3s ease-in-out;
+}
+
+.footer .credit .designer:hover {
+    color: var(--main-color);
+    text-shadow: 0 0 10px rgba(36, 123, 160, 0.8);
+}
+
+/* Fade-In Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Footer */
+@media (max-width: 1024px) {
+    .footer {
+        padding: 3rem 4%;
+    }
+    
+    .footer .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    }
+
+    .footer .box-container .box h3 {
+        font-size: 1.5rem;
+    }
+
+    .footer .box-container .box a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 2.5rem 3%;
+    }
+    
+    .footer .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    }
+
+    .footer .box-container .box h3 {
+        font-size: 1.4rem;
+    }
+
+    .footer .box-container .box a {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 2rem 3%;
+    }
+
+    .footer .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+
+    .footer .box-container .box h3 {
+        font-size: 1.3rem;
+    }
+
+    .footer .box-container .box a {
+        font-size: 1.1rem;
+    }
+
+    .footer .credit {
+        font-size: 1.1rem;
+    }
+}
