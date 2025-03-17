@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 :root {
-    --main-color: #c5cee6;
+    --main-color: #c5cee6; /* Main color background */
     --black: #222;
     --white: #fff;
     --tomato: #fd5e42;
@@ -27,19 +27,20 @@
 .packages {
     padding: 5rem 10%;
     text-align: center;
-    background: var(--light-bg);
+    background: var(--main-color); /* Matching home banner color */
+    color: var(--black); /* Set text color to black */
 }
 
 /* Section Title */
 .packages h2 {
     font-size: 2.5rem;
-    color: var(--black);
+    color: var(--black); /* Ensure text color is black */
     margin-bottom: 1rem;
 }
 
 .packages p {
     font-size: 1.4rem;
-    color: var(--light-black);
+    color: var(--light-black); /* Adjusted font color */
     max-width: 800px;
     margin: 0 auto 2rem;
 }
@@ -47,7 +48,7 @@
 /* Package List */
 .package-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Show 3 packages */
     gap: 2rem;
     margin-top: 2rem;
     justify-content: center;
@@ -80,37 +81,49 @@
 /* Hover Effect */
 .package:hover {
     transform: translateY(-10px);
-    background: var(--main-color);
-    color: var(--white);
+    background: var(--tomato); /* Change background color on hover */
+    color: var(--white); /* Text color change on hover */
 }
 
 /* Change text color inside hovered card */
 .package:hover h3,
 .package:hover p {
-    color: var(--white);
+    color: var(--white); /* White text inside card when hovered */
 }
 
-/* Book Now Button */
-.btn {
+/* Cost Styling */
+.package p {
+    font-size: 1.2rem; /* Smaller font size for cost */
+    color: var(--black); /* Black font color for cost */
+}
+
+/* See More Packages Button */
+.see-more-btn {
     display: inline-block;
     background: var(--tomato);
     color: var(--white);
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     padding: 1rem 2rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     border-radius: 5px;
     transition: 0.3s ease-in-out;
+    text-decoration: none; /* Ensure it's not underlined */
 }
 
-.btn:hover {
+.see-more-btn:hover {
     background: var(--black);
     transform: scale(1.05);
+}
+
+/* Package Page Background Color */
+body {
+    background-color: var(--main-color); /* Set background color for the package page */
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
     .package-list {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2 columns on smaller screens */
     }
     .packages h2 {
         font-size: 2.2rem;
@@ -125,7 +138,7 @@
 
 @media (max-width: 768px) {
     .package-list {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 1 column on mobile */
     }
     .packages h2 {
         font-size: 2rem;
@@ -140,7 +153,7 @@
 
 @media (max-width: 480px) {
     .package-list {
-        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* 1 column on mobile */
     }
     .packages h2 {
         font-size: 1.8rem;
