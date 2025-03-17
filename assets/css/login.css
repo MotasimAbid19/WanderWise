@@ -1,0 +1,184 @@
+/* General Styling */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #c5cee6; /* Matching the background color of the project */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures body takes full height */
+}
+
+.container {
+    flex: 1; /* Ensures the content area takes the remaining space */
+}
+
+/* Login Box Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Login Form */
+.login-box {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Header in Login Box */
+.login-box h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* Form Input Styling */
+.input-box {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.input-box input:focus {
+    border-color: #fd5e42;
+}
+
+/* Submit Button */
+.btn {
+    background-color: #fd5e42; /* Tomato color */
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #c35427; /* Darker shade of tomato on hover */
+}
+
+/* Error Message Styling */
+.error-message {
+    color: red;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Forgot Password and Links */
+.form-links {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.form-links a {
+    color: #fd5e42;
+    text-decoration: none;
+}
+
+.form-links a:hover {
+    text-decoration: underline;
+}
+
+.form-links p {
+    margin-top: 10px;
+}
+
+/* Styling for "Don't have an Account?" */
+.form-links p a {
+    color: #fd5e42;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-links p a:hover {
+    text-decoration: underline;
+}
+
+/* Footer at the bottom */
+footer {
+    margin-top: auto; /* Ensures footer stays at the bottom */
+    color: #fff; /* Make footer text white */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .login-box {
+        padding: 1.5rem;
+    }
+
+    .login-box h2 {
+        font-size: 2rem;
+    }
+
+    .input-box input {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-box {
+        padding: 1.2rem;
+    }
+
+    .login-box h2 {
+        font-size: 1.8rem;
+    }
+
+    .input-box input {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        padding: 1rem;
+    }
+
+    .login-box h2 {
+        font-size: 1.6rem;
+    }
+
+    .input-box input {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+    }
+}
