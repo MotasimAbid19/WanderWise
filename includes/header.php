@@ -23,11 +23,9 @@ if (session_status() == PHP_SESSION_NONE) {
         <a href="../views/faqs.php">FAQs</a>
 
         <?php if (isset($_SESSION['user_id'])): ?>
-            <!-- Profile and Logout Links if User is Logged In -->
             <a href="../views/profile.php">Profile</a>
             <a href="../views/logout.php">Logout</a>
         <?php else: ?>
-            <!-- Login Link if User is Not Logged In -->
             <a href="../views/login.php">Login</a>
         <?php endif; ?>
     </nav>
@@ -35,3 +33,23 @@ if (session_status() == PHP_SESSION_NONE) {
     <!-- Mobile menu toggle button -->
     <div id="menu-btn" class="fas fa-bars"></div>
 </header>
+
+
+<!-- Mobile Menu JavaScript -->
+<script>
+    // Get the mobile menu button and the navbar
+    const menuBtn = document.getElementById('menu-btn');
+    const navbar = document.querySelector('.header .navbar');
+
+    // Toggle the navbar when the menu button is clicked
+    menuBtn.onclick = () => {
+        menuBtn.classList.toggle('fa-times');  // Change icon to "X" on click
+        navbar.classList.toggle('active');  // Show the navbar
+    };
+
+    // Close navbar when scrolling (for mobile view)
+    window.onscroll = () => {
+        menuBtn.classList.remove('fa-times'); // Reset icon
+        navbar.classList.remove('active'); // Hide navbar
+    };
+</script>

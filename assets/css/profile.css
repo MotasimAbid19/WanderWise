@@ -2,6 +2,7 @@
 body {
     background-color: #c5cee6; /* Same background color as packages page */
 }
+
 .profile {
     padding: 5rem 10%;
     background-color: var(--main-color); /* Ensure this matches */
@@ -21,7 +22,6 @@ body {
     margin: 0 auto 2rem;
     text-align: center;
 }
-
 
 /* Profile Information */
 .profile-details {

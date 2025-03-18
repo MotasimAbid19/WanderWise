@@ -1,4 +1,4 @@
-/* Header Styling */
+/* General Header Styling */
 .header {
     position: fixed;
     top: 0;
@@ -58,7 +58,7 @@ body {
     font-size: 2.2rem;
     cursor: pointer;
     color: var(--black);
-    display: none;
+    display: none; /* Initially hidden */
     transition: 0.3s ease-in-out;
 }
 
@@ -78,9 +78,9 @@ body {
 }
 
 @media (max-width: 768px) {
-    /* Show menu button */
+    /* Show menu button on small screens */
     #menu-btn {
-        display: inline-block;
+        display: inline-block; /* Make it visible on smaller screens */
     }
 
     /* Hide navbar initially */
@@ -94,7 +94,7 @@ body {
         flex-direction: column;
         padding: 2rem;
         text-align: center;
-        transform: translateY(-100%);
+        transform: translateY(-100%); /* Initially hidden */
         transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
         opacity: 0;
         visibility: hidden;

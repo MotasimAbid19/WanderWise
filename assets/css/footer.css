@@ -10,6 +10,7 @@
     text-align: center;
     font-family: 'Poppins', sans-serif;
     position: relative;
+    margin-top: 10rem; /* To ensure footer is at the bottom of the page */
 }
 
 /* Footer Grid */
@@ -17,6 +18,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 /* Footer Headings */

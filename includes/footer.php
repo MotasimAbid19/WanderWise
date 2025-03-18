@@ -1,5 +1,6 @@
 <footer class="footer">
     <div class="box-container">
+        <!-- Quick Links Section -->
         <div class="box">
             <h3>Quick Links</h3>
             <a href="../views/home.php"><i class="fas fa-angle-right"></i> Home</a>
@@ -8,6 +9,7 @@
             <a href="../views/booking.php"><i class="fas fa-angle-right"></i> Book</a>
         </div>
 
+        <!-- Extra Links Section -->
         <div class="box">
             <h3>Extra Links</h3>
             <a href="../views/about.php"><i class="fas fa-angle-right"></i> About Us</a>
@@ -16,6 +18,7 @@
             <a href="#"><i class="fas fa-angle-right"></i> Privacy Policy</a>
         </div>
 
+        <!-- Contact Info Section -->
         <div class="box">
             <h3>Contact Info</h3>
             <a href="#"><i class="fas fa-phone"></i> +880-1517-089144</a>
@@ -24,6 +27,7 @@
             <a href="#"><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh - 1215</a>
         </div>
 
+        <!-- Follow Us Section -->
         <div class="box">
             <h3>Follow Us</h3>
             <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
@@ -33,5 +37,6 @@
         </div>
     </div>
 
+    <!-- Footer Credit Section -->
     <div class="credit">Designed by <span class="designer">WanderWise Team</span> | All Rights Reserved.</div>
 </footer>

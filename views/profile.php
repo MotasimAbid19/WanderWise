@@ -55,7 +55,7 @@ if (isset($_SESSION['user_id'])) {
                     </tr>
                     <tr>
                         <th>Password (hashed)</th>
-                        <td><?php echo '************'; ?></td>
+                        <td>************</td>
                     </tr>
                 </table>
             </div>
@@ -110,4 +110,3 @@ if (isset($_SESSION['user_id'])) {
 </section>
 
 <?php include '../includes/footer.php'; ?>
-

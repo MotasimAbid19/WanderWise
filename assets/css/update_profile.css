@@ -1,0 +1,70 @@
+/* General Styling for Update Profile Page */
+body {
+    background-color: #c5cee6; /* Same background color as packages page */
+}
+
+.update-profile {
+    padding: 5rem 10%;
+    background-color: var(--main-color); /* Ensure this matches */
+    color: var(--black);
+    margin-top: 90px; /* To prevent overlap with the fixed header */
+}
+
+.update-profile h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.update-profile p {
+    font-size: 1.4rem;
+    color: var(--light-black);
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+/* Form Styling */
+.update-profile form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.update-profile .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.update-profile label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.update-profile input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.update-profile button {
+    display: inline-block;
+    background-color: var(--tomato);
+    color: var(--white);
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.update-profile button:hover {
+    background-color: var(--black);
+}
