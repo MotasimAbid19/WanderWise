@@ -40,6 +40,11 @@ body {
     max-width: 400px;
     text-align: center;
 }
+/* Ensure placeholder text is visible */
+input::placeholder {
+    color: #999;  /* You can change the color as needed */
+    font-style: italic;
+}
 
 /* Header in Register Box */
 .register-box h2 {

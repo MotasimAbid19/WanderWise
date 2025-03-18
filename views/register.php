@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     <!-- Phone -->
                     <div class="input-box">
-                        <input type="text" name="phone" id="phone" placeholder="Phone Number" required>
+                        <input type="text" name="phone" id="phone" placeholder="Phone Number: +8801XXXXXXXXX" required>
                     </div>
 
                     <!-- Terms and Conditions -->
