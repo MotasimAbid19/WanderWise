@@ -1,25 +1,42 @@
-/* General Styling for About Section */
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4; /* Light gray background */
+    color: var(--black);
+}
+
+/* About Section Styling */
 .about-section {
     padding: 5rem 10%;
     background-color: var(--main-color); /* Main background color */
-    color: var(--white);
+    color: #fff;
     text-align: center;
+    margin-bottom: 3rem;
 }
 
 .about-section h2 {
     font-size: 3rem;
-    color: var(--white);
+    color: var(--black);
     margin-bottom: 2rem;
 }
 
 .about-section p {
     font-size: 1.5rem;
-    color: var(--light-black);
-    line-height: 2;
+    color: var(--black);
+    line-height: 1.8;
     margin-bottom: 1.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Split Section (Image and Content) */
+/* About Details - Image and Content Split */
 .about-details {
     display: flex;
     justify-content: space-between;
@@ -30,24 +47,29 @@
 }
 
 .about-left {
-    flex: 1 1 40%;
+    flex: 1 1 45%;
     text-align: center;
 }
 
 .about-left img {
-    width: 80%; /* Adjust the width to make the image smaller */
+    width: 90%;
     height: auto;
     border-radius: 10px;
     box-shadow: var(--box-shadow);
-    animation: fadeIn 2s ease-out;
+    transition: transform 0.3s ease; /* Add transition for zoom effect */
+}
+
+.about-left img:hover {
+    transform: scale(1.05); /* Zoom in on hover */
 }
 
 .about-right {
     flex: 1 1 50%;
-    background-color: var(--light-bg);
+    background-color: #fff;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: var(--box-shadow);
+    color: var(--black);
 }
 
 .about-right h3 {
@@ -59,7 +81,7 @@
 .about-right p {
     font-size: 1.5rem;
     color: var(--light-black);
-    line-height: 2;
+    line-height: 1.8;
     text-align: justify;
 }
 
@@ -70,11 +92,13 @@
 }
 
 .icons-container .icons {
-    background-color: var(--white);
+    background-color: #fff;
     padding: 1rem;
     border-radius: 10px;
     text-align: center;
     width: 30%;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .icons-container .icons i {
@@ -87,6 +111,17 @@
     font-size: 1.5rem;
     color: var(--light-black);
 }
+
+/* Hover effect for icons */
+.icons-container .icons:hover {
+    background-color: #fd5e42; /* Orange background */
+}
+
+.icons-container .icons:hover i,
+.icons-container .icons:hover span {
+    color: white; /* White text on hover */
+}
+
 /* Animations */
 @keyframes fadeIn {
     0% {
@@ -112,5 +147,27 @@
 
     .about-right {
         text-align: center;
+    }
+
+    .about-left img {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .about-right h3 {
+        font-size: 2rem; /* Slightly smaller font size */
+    }
+
+    .about-right p {
+        font-size: 1.3rem; /* Slightly smaller text */
+    }
+
+    .icons-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icons-container .icons {
+        width: 80%; /* Full width for icons on small screens */
+        margin-bottom: 1rem;
     }
 }

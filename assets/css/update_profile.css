@@ -1,4 +1,11 @@
 /* General Styling for Update Profile Page */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
 body {
     background-color: #c5cee6; /* Same background color as packages page */
 }

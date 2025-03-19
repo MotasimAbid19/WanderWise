@@ -1,0 +1,117 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--main-color);
+    color: var(--black);
+}
+
+/* Terms and Conditions Section */
+.terms-section {
+    padding: 5rem 10%;
+    background-color: var(--main-color);
+    text-align: center;
+}
+
+.terms-section h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.terms-section p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Card Layout for Each Section */
+.terms-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+    margin-top: 2rem;
+    animation: fadeIn 2s ease-out;
+}
+
+.terms-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    color: var(--black);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.terms-card h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.terms-card p {
+    font-size: 1.4rem;
+    color: var(--light-black);
+    line-height: 1.8;
+}
+
+.terms-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Us Section */
+.terms-section a {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.terms-section a:hover {
+    color: #fd5e42;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Media Queries for Small Screens */
+@media (max-width: 768px) {
+    .terms-section {
+        padding: 3rem 5%;
+    }
+
+    .terms-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .terms-section p {
+        font-size: 1.3rem;
+    }
+
+    .terms-section h3 {
+        font-size: 2rem;
+    }
+
+    .terms-content {
+        grid-template-columns: 1fr;
+    }
+
+    .terms-card {
+        padding: 1.5rem;
+    }
+}

@@ -19,7 +19,7 @@
     </div>
     <div class="about-right">
         <h3>Why Choose Us?</h3>
-        <p>Amazing Tours, a Best Tour Operator and Travel Agent in Bangladesh. We offer Tour Packages, Hotel Booking, and Bangladesh Tours & Travel Services. We provide both international and domestic tour packages at low prices including the best ... Travel Package | Honeymoon Package | Tour Package</p>
+        <p>Amazing Tours, a Best Tour Operator and Travel Agent in Bangladesh. We offer Tour Packages, Hotel Booking, and Bangladesh Tours & Travel Services. We provide both international and domestic tour packages at low prices including the best Travel Package | Honeymoon Package | Tour Package</p>
         <p>Fantastic getaway with great communication, friendly and easy to deal with. (Shame the transfer back to the airport on the final day wasn't included)</p>
         <div class="icons-container">
             <div class="icons">

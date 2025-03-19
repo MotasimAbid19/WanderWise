@@ -1,4 +1,26 @@
 /* General Header Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+:root {
+    --main-color: #c5cee6; /* Matching the theme color */
+    --black: #222;
+    --white: #fff;
+    --tomato: #fd5e42;
+    --light-black: #777;
+    --light-white: rgba(255, 255, 255, 0.9);
+    --dark-bg: rgba(0,0,0,.7);
+    --light-bg: #eee;
+    --border: .1rem solid var(--main-color);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    --text-shadow: 0 1.5rem 3rem rgba(0,0,0,.3);
+}
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
 .header {
     position: fixed;
     top: 0;
@@ -47,6 +69,7 @@ body {
     color: var(--black);
     text-transform: uppercase;
     transition: color 0.3s ease-in-out;
+    text-decoration: none;
 }
 
 .header .navbar a:hover {

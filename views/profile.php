@@ -54,7 +54,7 @@ if (isset($_SESSION['user_id'])) {
                         <td><?php echo $user['phone']; ?></td>
                     </tr>
                     <tr>
-                        <th>Password (hashed)</th>
+                        <th>Password </th>
                         <td>************</td>
                     </tr>
                 </table>
