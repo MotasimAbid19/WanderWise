@@ -1,0 +1,116 @@
+/* General Styling for About Section */
+.about-section {
+    padding: 5rem 10%;
+    background-color: var(--main-color); /* Main background color */
+    color: var(--white);
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 3rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+.about-section p {
+    font-size: 1.5rem;
+    color: var(--light-black);
+    line-height: 2;
+    margin-bottom: 1.5rem;
+}
+
+/* Split Section (Image and Content) */
+.about-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 3rem 10%;
+    flex-wrap: wrap;
+    animation: fadeIn 2s ease-out;
+}
+
+.about-left {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.about-left img {
+    width: 80%; /* Adjust the width to make the image smaller */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    animation: fadeIn 2s ease-out;
+}
+
+.about-right {
+    flex: 1 1 50%;
+    background-color: var(--light-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.about-right h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.about-right p {
+    font-size: 1.5rem;
+    color: var(--light-black);
+    line-height: 2;
+    text-align: justify;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.icons-container .icons {
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+}
+
+.icons-container .icons i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+}
+
+.icons-container .icons span {
+    font-size: 1.5rem;
+    color: var(--light-black);
+}
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .about-details {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-left {
+        margin-bottom: 2rem;
+    }
+
+    .about-right {
+        text-align: center;
+    }
+}
