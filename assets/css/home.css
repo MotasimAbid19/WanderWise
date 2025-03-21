@@ -233,17 +233,73 @@
     text-decoration: underline;
 }
 
-/* FAQs Section */
-.faqs {
+/* Home FAQs Section */
+.faqs-home {
     padding: 5rem 10%;
+    background-color: var(--main-color);
+    color: var(--black);
     text-align: center;
-    background: var(--white);
 }
 
-.faqs h2 {
+.faqs-home h2 {
     font-size: 3rem;
     color: var(--black);
     margin-bottom: 1rem;
+}
+
+.faq-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    margin-bottom: 2rem; /* Added margin at the bottom */
+}
+
+.faq-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    text-align: left;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 100%;
+}
+
+.faq-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.faq-card p {
+    font-size: 1rem;
+    color: var(--light-black);
+    line-height: 1.8;
+}
+
+/* Hover Effect for FAQ Cards */
+.faq-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Read FAQ Button Styling */
+.faqs-home .btn {
+    display: inline-block;
+    background: var(--tomato);
+    color: var(--white);
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    margin-top: 2rem; /* Added margin top to move button below the cards */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.faqs-home .btn:hover {
+    background: var(--black);
+    transform: scale(1.05);
 }
 
 /* Keyframe Animations */
@@ -275,6 +331,9 @@
     .package-list {
         grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
     }
+    .faq-cards {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
 }
 
 @media (max-width: 768px) {
@@ -291,6 +350,9 @@
     }
 
     .package-list {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+    .faq-cards {
         grid-template-columns: 1fr; /* 1 column on mobile */
     }
 }

@@ -1,0 +1,124 @@
+/* General Styling for FAQ Section */
+
+.faqs-section {
+    padding: 5rem 10%;
+    background-color: var(--main-color);
+    color: var(--black);
+    text-align: center;
+}
+
+.faqs-section h2 {
+    font-size: 3rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.faqs-section p {
+    font-size: 1.5rem;
+    color: var(--light-black);
+    line-height: 2;
+    margin-bottom: 3rem;
+}
+
+/* FAQ List Styles */
+.faq-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    animation: fadeIn 1s ease-out;
+}
+
+/* FAQ Item Styling */
+.faq-item {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+/* Question Styling */
+.faq-item .question {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.faq-item .question p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.faq-item .question .faq-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+/* Answer Styling */
+.faq-item .answer {
+    display: none;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: var(--light-black);
+    line-height: 1.8;
+}
+
+.faq-item .answer .faq-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+/* Display answer when clicked */
+.faq-item.active .answer {
+    display: block; /* initially hidden */
+}
+
+/* Hover Effect for FAQ Items */
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faqs-section {
+        padding: 3rem 5%;
+    }
+
+    .faqs-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .faqs-section p {
+        font-size: 1.4rem;
+    }
+
+    .faq-item .question {
+        font-size: 1.8rem;
+    }
+
+    .faq-item .answer {
+        font-size: 1.4rem;
+    }
+
+    .faq-list {
+        grid-template-columns: 1fr;
+    }
+}

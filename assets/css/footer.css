@@ -10,7 +10,7 @@
     text-align: center;
     font-family: 'Poppins', sans-serif;
     position: relative;
-    margin-top: 10rem; /* To ensure footer is at the bottom of the page */
+    margin-top: 0; /* To prevent overlap with the fixed header */
 }
 
 /* Footer Grid */

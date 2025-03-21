@@ -62,13 +62,28 @@
     </div>
 </section>
 
-<!-- FAQs Section -->
-<section class="faqs">
+<!-- FAQs Section (Only 3 FAQs) -->
+<section class="faqs-home">
     <div class="container">
         <h2>Frequently Asked Questions</h2>
         <p>Find answers to common travel questions or submit your own.</p>
+        <div class="faq-cards">
+            <div class="faq-card">
+                <h3>What is WanderWise?</h3>
+                <p>WanderWise is a travel platform that connects travelers with third-party service providers, offering flight bookings, hotel bookings, tour packages, and more.</p>
+            </div>
+
+            <div class="faq-card">
+                <h3>How do I book a tour with WanderWise?</h3>
+                <p>To book a tour, simply visit our packages section, choose a tour that suits your preferences, and follow the instructions to book your trip.</p>
+            </div>
+
+            <div class="faq-card">
+                <h3>Do you offer travel insurance?</h3>
+                <p>Yes, we offer travel insurance options in partnership with licensed insurance providers. Please refer to our insurance section for more details.</p>
+            </div>
+        </div>
         <a href="../views/faqs.php" class="btn">Read FAQs</a>
     </div>
 </section>
-
 <?php include '../includes/footer.php'; ?>
