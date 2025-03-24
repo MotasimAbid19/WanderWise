@@ -17,7 +17,7 @@ body {
     margin: 0 auto;
     padding: 3rem;
     background-color: var(--main-color);
-    color: white;
+    color: var(--black);
     border-radius: 10px;
     box-shadow: var(--box-shadow);
     animation: fadeIn 1s ease-out;
@@ -38,24 +38,63 @@ form {
     align-items: center;
 }
 
-/* Form Inputs */
-label {
-    font-size: 1.3rem;
-    color: var(--black);    
+/* Card Styling */
+.card {
+    width: 30%;
+    background-color: var(--main-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.3s ease;
 }
 
-input, select {
-    padding: 1rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    width: 60%;
-    border: 1px solid #ccc;
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    background: var(--tomato); /* Change background color on hover */
+    color: var(--black); /* Text color change on hover */
+}
+
+.card h4 {
+    font-size: 1.5rem;
+    color: var(--black);
+    margin-top: 10px;
+}
+
+.card p {
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+.card input[type="radio"] {
+    margin-top: 10px;
+}
+
+/* Layout for card views */
+.hotel-cards, .car-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hotel-cards .card, .car-cards .card {
+    flex: 1 1 30%;
+    margin: 10px;
 }
 
 /* Buttons */
 button, .btn {
-    background-color: var(--tomato);    
-    color: white;
+    background-color: var(--tomato);
+    color: var(--white);
     padding: 1rem 2rem;
     text-decoration: none;
     border-radius: 5px;
@@ -66,25 +105,8 @@ button, .btn {
 }
 
 button:hover, .btn:hover {
-    background-color: #c35427;
+    background-color: var(--black);
     transform: scale(1.05);
-}
-
-a {
-    text-decoration: none;
-}
-
-.btn {
-    display: inline-block;
-}
-
-/* Nearby Facilities Button */
-.btn {
-    background-color: #4CAF50; /* Green background */
-}
-
-.btn:hover {
-    background-color: #388E3C;
 }
 
 /* Animation for elements */
@@ -110,11 +132,8 @@ a {
         font-size: 2rem;
     }
 
-    input, select {
-        width: 80%; /* Wider inputs on mobile */
-    }
-
-    button, .btn {
-        width: 80%; /* Make buttons full-width on mobile */
+    .card {
+        width: 100%;
+        margin: 10px 0;
     }
 }

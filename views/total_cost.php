@@ -8,7 +8,7 @@ if (isset($_GET['booking_id'])) {
     $booking_id = $_GET['booking_id'];
 
     // Fetch the booking details
-    $sql = "SELECT b.*, p.name AS package_name, p.price 
+    $sql = "SELECT b.*, p.name AS package_name, p.price, b.hotel, b.car_rental 
             FROM bookings b 
             JOIN packages p ON b.package_id = p.id 
             WHERE b.id = $booking_id";
@@ -17,7 +17,45 @@ if (isset($_GET['booking_id'])) {
 
     if ($result->num_rows > 0) {
         $booking = $result->fetch_assoc();
-        $total_cost = $booking['price'] * $booking['number_of_people']; // Recalculate total cost
+
+        // Calculate total cost
+        $total_cost = $booking['price'] * $booking['number_of_people'];
+
+        // Add hotel price to total cost
+        switch ($booking['hotel']) {
+            case '3-star':
+                $hotel_price = 8000;
+                break;
+            case '4-star':
+                $hotel_price = 12000;
+                break;
+            case '5-star':
+                $hotel_price = 20000;
+                break;
+            default:
+                $hotel_price = 0;
+                break;
+        }
+
+        // Add car rental price to total cost
+        switch ($booking['car_rental']) {
+            case 'Economy':
+                $car_rental_price = 10000;
+                break;
+            case 'Sedan':
+                $car_rental_price = 17000;
+                break;
+            case 'SUV':
+                $car_rental_price = 25000;
+                break;
+            default:
+                $car_rental_price = 0;
+                break;
+        }
+
+        // Add hotel and car rental prices to total cost
+        $total_cost += $hotel_price + $car_rental_price;
+
     } else {
         echo "Booking not found.";
         exit;
@@ -52,6 +90,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['confirm_booking'])) {
         <h3>Package: <?php echo $booking['package_name']; ?></h3>
         <p><strong>Number of People:</strong> <?php echo $booking['number_of_people']; ?></p>
         <p><strong>Travel Date:</strong> <?php echo $booking['booking_date']; ?></p>
+
+        <!-- Display Hotel -->
+        <p><strong>Hotel:</strong> <?php echo ucfirst($booking['hotel']); ?> (Price: ৳<?php echo number_format($hotel_price, 2); ?>)</p>
+
+        <!-- Display Car Rental -->
+        <p><strong>Car Rental:</strong> <?php echo ucfirst($booking['car_rental']); ?> (Price: ৳<?php echo number_format($car_rental_price, 2); ?>)</p>
+
+        <!-- Display Total Cost -->
         <p><strong>Total Cost:</strong> ৳<?php echo number_format($total_cost, 2); ?></p>
     </div>
 
