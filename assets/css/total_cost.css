@@ -1,0 +1,98 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--main-color);    
+    color: var(--black);
+}
+
+/* Total Cost Page Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 3rem;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    animation: fadeIn 1s ease-out;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--black);    
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Booking Details */
+.booking-details {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color: var(--black);
+    text-align: center;
+}
+
+.booking-details p {
+    margin-bottom: 1rem;
+}
+
+.booking-details h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Confirm Button */
+button, .btn {
+    background-color: var(--tomato);
+    color: var(--black);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: var(--main-color);
+    transform: scale(1.05);
+}
+
+/* Animation for elements */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .booking-details p {
+        font-size: 1.3rem;
+    }
+
+    button, .btn {
+        width: 80%;
+    }
+}
