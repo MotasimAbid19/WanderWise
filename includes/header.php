@@ -10,7 +10,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
     <div class="logo">
         <a href="../views/home.php">
-            <img src="../assets/images/logo.png" alt="WanderWise Logo">
+            <img src="../assets/images/ww_logo.png" alt="WanderWise Logo">
         </a>
     </div>
 
@@ -19,7 +19,6 @@ if (session_status() == PHP_SESSION_NONE) {
         <a href="../views/about.php">About</a>
         <a href="../views/packages.php">Packages</a>
         <a href="../views/booking.php">Booking</a>
-        <a href="../views/nearby.php">Nearby Facilities</a>
         <a href="../views/faqs.php">FAQs</a>
 
         <?php if (isset($_SESSION['user_id'])): ?>

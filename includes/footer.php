@@ -14,15 +14,15 @@
             <h3>Extra Links</h3>
             <a href="../views/about.php"><i class="fas fa-angle-right"></i> About Us</a>
             <a href="../views/faqs.php"><i class="fas fa-angle-right"></i> Ask Questions</a>
-            <a href="#"><i class="fas fa-angle-right"></i> Terms of Use</a>
-            <a href="#"><i class="fas fa-angle-right"></i> Privacy Policy</a>
+            <a href="../views/terms_and_condition.php"><i class="fas fa-angle-right"></i> Terms of Use</a>
+            <a href="../views/terms_and_condition.php"><i class="fas fa-angle-right"></i> Privacy Policy</a>
         </div>
 
         <!-- Contact Info Section -->
         <div class="box">
             <h3>Contact Info</h3>
-            <a href="#"><i class="fas fa-phone"></i> +880-1517-089144</a>
-            <a href="#"><i class="fas fa-phone"></i> +111-2222-333333</a>
+            <a href="#"><i class="fas fa-phone"></i> +880-1843-782881</a>
+            <a href="#"><i class="fas fa-phone"></i> +999-2222-333333</a>
             <a href="#"><i class="fas fa-envelope"></i> info@wanderwise.com</a>
             <a href="#"><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh - 1215</a>
         </div>

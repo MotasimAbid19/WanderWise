@@ -72,7 +72,7 @@ if (isset($_SESSION['user_id'])) {
                     <tr>
                         <th>Booking ID</th>
                         <th>Package ID</th>
-                        <th>Package Description</th>
+                        <th>Destination Name</th>
                         <th>Price</th>
                         <th>Status</th>
                         <th>Payment Status</th>
@@ -93,8 +93,8 @@ if (isset($_SESSION['user_id'])) {
                             echo "<tr>";
                             echo "<td>" . $booking['id'] . "</td>";
                             echo "<td>" . $booking['package_id'] . "</td>";
-                            echo "<td>" . $package['description'] . "</td>";
-                            echo "<td>" . $package['price'] . "</td>";
+                            echo "<td>" . $package['name'] . "</td>";
+                            echo "<td>" . $booking['total_cost'] . "</td>";
                             echo "<td>" . $booking['status'] . "</td>";
                             echo "<td>" . $booking['payment_status'] . "</td>";
                             echo "</tr>";

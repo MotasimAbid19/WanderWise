@@ -14,7 +14,7 @@
                     <p>What is WanderWise?</p>
                 </div>
                 <div class="answer">
-                    <img src="../assets/images/wanderwise-logo.png" alt="WanderWise Logo" class="faq-logo">
+                    <img src="../assets/images/ww_logo.png" alt="WanderWise Logo" class="faq-logo">
                     <p>WanderWise is a travel platform that connects travelers with third-party service providers, offering flight bookings, hotel bookings, tour packages, and more.</p>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                     <p>How do I book a tour with WanderWise?</p>
                 </div>
                 <div class="answer">
-                    <img src="../assets/images/wanderwise-logo.png" alt="WanderWise Logo" class="faq-logo">
+                    <img src="../assets/images/ww_logo.png" alt="WanderWise Logo" class="faq-logo">
                     <p>To book a tour, simply visit our packages section, choose a tour that suits your preferences, and follow the instructions to book your trip.</p>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                     <p>Can I cancel my booking?</p>
                 </div>
                 <div class="answer">
-                    <img src="../assets/images/wanderwise-logo.png" alt="WanderWise Logo" class="faq-logo">
+                    <img src="../assets/images/ww_logo.png" alt="WanderWise Logo" class="faq-logo">
                     <p>Booking cancellations depend on the provider's policy. Please refer to the cancellation terms of the specific travel product for more details.</p>
                 </div>
             </div>
@@ -47,7 +47,7 @@
                     <p>Is my personal data safe on WanderWise?</p>
                 </div>
                 <div class="answer">
-                    <img src="../assets/images/wanderwise-logo.png" alt="WanderWise Logo" class="faq-logo">
+                    <img src="../assets/images/ww_logo.png" alt="WanderWise Logo" class="faq-logo">
                     <p>Yes, we take your privacy seriously. Please review our <a href="privacy_policy.php">Privacy Policy</a> for details on how we protect your data.</p>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                     <p>What payment methods are accepted?</p>
                 </div>
                 <div class="answer">
-                    <img src="../assets/images/wanderwise-logo.png" alt="WanderWise Logo" class="faq-logo">
+                    <img src="../assets/images/ww_logo.png" alt="WanderWise Logo" class="faq-logo">
                     <p>We accept various payment methods, including credit/debit cards, bank transfers, and EMI (Equated Monthly Installments) for eligible credit cardholders.</p>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                     <p>Do you offer travel insurance?</p>
                 </div>
                 <div class="answer">
-                    <img src="../assets/images/wanderwise-logo.png" alt="WanderWise Logo" class="faq-logo">
+                    <img src="../assets/images/ww_logo.png" alt="WanderWise Logo" class="faq-logo">
                     <p>Yes, we offer travel insurance options in partnership with licensed insurance providers. Please refer to our insurance section for more details.</p>
                 </div>
             </div>

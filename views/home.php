@@ -55,9 +55,9 @@
         <h2>Nearby Facilities</h2>
         <p>Find the best services near your destination.</p>
         <ul>
-            <li><a href="../views/rental.php">Rental Booking</a></li>
-            <li><a href="../views/hotels.php">Hotel Booking</a></li>
-            <li><a href="../views/restaurants.php">Restaurants</a></li>
+            <li><a href="../views/nearby.php">Rental Booking</a></li>
+            <li><a href="../views/nearby.php">Hotel Booking</a></li>
+            <li><a href="../views/nearby.php">Restaurants</a></li>
         </ul>
     </div>
 </section>
