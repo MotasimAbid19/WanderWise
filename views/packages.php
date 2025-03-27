@@ -1,23 +1,16 @@
 <?php
 // Include header
 include '../includes/header.php';
+include('../config/db.php');
 
-// Database connection
-$host = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'wanderwise_db';
-
-// Create connection
-$conn = new mysqli($host, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+// Check if a search query is submitted
+$search_query = '';
+if (isset($_POST['search'])) {
+    $search_query = $_POST['search'];
 }
 
-// Fetch packages from the database
-$sql = "SELECT * FROM packages";
+// Fetch packages from the database with the search filter
+$sql = "SELECT * FROM packages WHERE name LIKE '%$search_query%' OR description LIKE '%$search_query%' OR location LIKE '%$search_query%'";
 $result = $conn->query($sql);
 ?>
 
@@ -27,7 +20,13 @@ $result = $conn->query($sql);
     <div class="container">
         <h2>Our Travel Packages</h2>
         <p>Choose from our best destinations and start your adventure.</p>
-        
+
+        <!-- Search Form -->
+        <form method="POST" action="packages.php">
+            <input type="text" name="search" value="<?php echo $search_query; ?>" placeholder="Search packages..." class="search-input">
+            <button type="submit" class="search-btn">Search</button>
+        </form>
+
         <div class="package-list">
             <?php
             if ($result->num_rows > 0) {
@@ -43,7 +42,7 @@ $result = $conn->query($sql);
                     echo '</div>';
                 }
             } else {
-                echo '<p>No packages available.</p>';
+                echo '<p>No packages found.</p>';
             }
 
             // Close the database connection

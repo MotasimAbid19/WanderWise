@@ -119,6 +119,30 @@
 body {
     background-color: var(--main-color); /* Set background color for the package page */
 }
+/* Search Bar Styling */
+.search-input {
+    padding: 0.8rem;
+    font-size: 1rem;
+    width: 60%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.search-btn {
+    background-color: var(--tomato);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.search-btn:hover {
+    background-color: var(--black);
+}
 
 /* Responsive Design */
 @media (max-width: 1024px) {
