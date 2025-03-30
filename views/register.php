@@ -97,4 +97,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <!-- Include the footer -->
 <?php include('../includes/footer.php'); ?>
 
-<script src="../assets/js/validate_register.js"></script>
+<script src="../assets/js/validate_register.js" defer></script>

@@ -26,21 +26,21 @@
         <div class="package-list">
             <!-- Thailand -->
             <div class="package">
-                <img src="../assets/images/thailand.jpg" alt="Thailand">
+                <img src="../assets/images/thailand.jpg" alt="Thailand" loading="lazy">
                 <h3>Thailand (Bangkok, Pattaya, Phuket)</h3>
                 <p><strong>Approx Cost:</strong> BDT 70,000 – 1,20,000</p>
             </div>
 
             <!-- Malaysia -->
             <div class="package">
-                <img src="../assets/images/malaysia.jpg" alt="Malaysia">
+                <img src="../assets/images/malaysia.jpg" alt="Malaysia" loading="lazy">
                 <h3>Malaysia (Kuala Lumpur, Langkawi, Penang)</h3>
                 <p><strong>Approx Cost:</strong> BDT 60,000 – 1,00,000</p>
             </div>
 
             <!-- Indonesia -->
             <div class="package">
-                <img src="../assets/images/indonesia.jpg" alt="Indonesia">
+                <img src="../assets/images/indonesia.jpg" alt="Indonesia" loading="lazy">
                 <h3>Indonesia (Bali, Jakarta)</h3>
                 <p><strong>Approx Cost:</strong> BDT 1,00,000 – 1,50,000</p>
             </div>

@@ -140,21 +140,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h3>Select Your Hotel:</h3>
         <div class="hotel-cards">
             <div class="card">
-                <img src="../assets/images/3_star_hotel.png" alt="Hotel 1">
+                <img src="../assets/images/3_star_hotel.png" alt="Hotel 1" loading="lazy">
                 <h4>3-Star Hotel</h4>
                 <p>Comfortable stay at an affordable price.</p>
                 <p>Price: ৳8000</p>
                 <input type="radio" name="hotel" value="3-star" <?php echo isset($booking) && $booking['hotel'] == '3-star' ? 'checked' : ''; ?>>
             </div>
             <div class="card">
-                <img src="../assets/images/4_star_hotel.png" alt="Hotel 2">
+                <img src="../assets/images/4_star_hotel.png" alt="Hotel 2" loading="lazy">
                 <h4>4-Star Hotel</h4>
                 <p>Relax in a modern and luxurious setting.</p>
                 <p>Price: ৳12000</p>
                 <input type="radio" name="hotel" value="4-star" <?php echo isset($booking) && $booking['hotel'] == '4-star' ? 'checked' : ''; ?>>
             </div>
             <div class="card">
-                <img src="../assets/images/5_star_hotel.png" alt="Hotel 3">
+                <img src="../assets/images/5_star_hotel.png" alt="Hotel 3" loading="lazy"> 
                 <h4>5-Star Hotel</h4>
                 <p>Experience premium luxury with top-notch facilities.</p>
                 <p>Price: ৳20000</p>
@@ -168,21 +168,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h3>Select Your Car Rental:</h3>
         <div class="car-cards">
             <div class="card">
-                <img src="../assets/images/economic_car.png" alt="Economy Car">
+                <img src="../assets/images/economic_car.png" alt="Economy Car" loading="lazy">
                 <h4>Economy Car</h4>
                 <p>Perfect for a quick city trip.</p>
                 <p>Price: ৳10000</p>
                 <input type="radio" name="car_rental" value="Economy" <?php echo isset($booking) && $booking['car_rental'] == 'Economy' ? 'checked' : ''; ?>>
             </div>
             <div class="card">
-                <img src="../assets/images/sedan_car.png" alt="Sedan Car">
+                <img src="../assets/images/sedan_car.png" alt="Sedan Car" loading="lazy">
                 <h4>Sedan</h4>
                 <p>Comfortable for small groups or families.</p>
                 <p>Price: ৳17000</p>
                 <input type="radio" name="car_rental" value="Sedan" <?php echo isset($booking) && $booking['car_rental'] == 'Sedan' ? 'checked' : ''; ?>>
             </div>
             <div class="card">
-                <img src="../assets/images/suv_car.png" alt="SUV Car">
+                <img src="../assets/images/suv_car.png" alt="SUV Car" loading="lazy">
                 <h4>SUV</h4>
                 <p>Perfect for large groups or family vacations.</p>
                 <p>Price: ৳25000</p>

@@ -7,6 +7,8 @@ if (session_status() == PHP_SESSION_NONE) {
 <header class="header">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
+    <script src="../assets/js/script.js" defer></script>
+    <script src="../assets/js/service_worker.js" defer></script>
 
     <div class="logo">
         <a href="../views/home.php">

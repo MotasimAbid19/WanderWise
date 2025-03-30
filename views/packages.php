@@ -32,7 +32,7 @@ $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo '<div class="package">';
-                    echo '<img src="../assets/images/' . $row['image'] . '" alt="' . $row['name'] . '" class="package-image">';
+                    echo '<img src="../assets/images/' . $row['image'] . '" alt="' . $row['name'] . '" class="package-image" loading="lazy">';
                     echo '<h3>' . $row['name'] . '</h3>';
                     echo '<p>' . $row['description'] . '</p>';
                     echo '<p><strong>Price:</strong> BDT ' . number_format($row['price'], 0, '.', ',') . '</p>';

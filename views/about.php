@@ -15,7 +15,7 @@
 <!-- Split Section (Image and Why Choose Us) -->
 <section class="about-details">
     <div class="about-left">
-        <img src="../assets/images/about.jpg" alt="About Us Image">
+        <img src="../assets/images/about.jpg" alt="About Us Image" loading="lazy">
     </div>
     <div class="about-right">
         <h3>Why Choose Us?</h3>

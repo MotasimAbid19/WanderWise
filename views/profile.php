@@ -28,7 +28,7 @@ if (isset($_SESSION['user_id'])) {
         <div class="profile-details">
             <div class="profile-picture">
                 <!-- Display user profile picture or default image -->
-                <img src="../assets/images/<?php echo $user['profile_picture']; ?>" alt="Profile Picture">
+                <img src="../assets/images/<?php echo $user['profile_picture']; ?>" alt="Profile Picture" loacding="lazy">
             </div>
 
             <div class="profile-info">
@@ -54,7 +54,7 @@ if (isset($_SESSION['user_id'])) {
                         <td><?php echo $user['phone']; ?></td>
                     </tr>
                     <tr>
-                        <th>Password </th>
+                        <th>Password</th>
                         <td>************</td>
                     </tr>
                 </table>
@@ -76,6 +76,7 @@ if (isset($_SESSION['user_id'])) {
                         <th>Price</th>
                         <th>Status</th>
                         <th>Payment Status</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -94,13 +95,20 @@ if (isset($_SESSION['user_id'])) {
                             echo "<td>" . $booking['id'] . "</td>";
                             echo "<td>" . $booking['package_id'] . "</td>";
                             echo "<td>" . $package['name'] . "</td>";
-                            echo "<td>" . $booking['total_cost'] . "</td>";
+                            echo "<td>BDT " . number_format($booking['total_cost'], 0, '.', ',') . "</td>";
                             echo "<td>" . $booking['status'] . "</td>";
                             echo "<td>" . $booking['payment_status'] . "</td>";
+                            
+                            // If payment status is pending, show the "Pay Now" button
+                            if ($booking['payment_status'] == 'pending') {
+                                echo "<td><a href='payment.php?booking_id=" . $booking['id'] . "' class='btn'>Pay Now</a></td>";
+                            } else {
+                                echo "<td>Paid</td>";
+                            }
                             echo "</tr>";
                         }
                     } else {
-                        echo "<tr><td colspan='6'>No bookings found</td></tr>";
+                        echo "<tr><td colspan='7'>No bookings found</td></tr>";
                     }
                     ?>
                 </tbody>
