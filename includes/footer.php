@@ -21,7 +21,7 @@
         <!-- Contact Info Section -->
         <div class="box">
             <h3>Contact Info</h3>
-            <a href="#"><i class="fas fa-phone"></i> +880-1843-782881</a>
+            <a href="#"><i class="fas fa-phone"></i> +880-1999-999999</a>
             <a href="#"><i class="fas fa-phone"></i> +999-2222-333333</a>
             <a href="#"><i class="fas fa-envelope"></i> info@wanderwise.com</a>
             <a href="#"><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh - 1215</a>
