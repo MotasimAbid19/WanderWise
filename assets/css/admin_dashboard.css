@@ -1,0 +1,95 @@
+/* Admin Dashboard Styling */
+.dashboard-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #f9f9f9;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.section {
+    margin-bottom: 3rem;
+}
+
+/* Data Tables */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.data-table th, .data-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #f2f2f2;
+}
+
+.data-table td a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.data-table td a:hover {
+    color: #0056b3;
+}
+
+/* Form Inputs */
+input, textarea, button {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Button Styling */
+button {
+    background-color: #fd5e42;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #c35427;
+}
+
+/* Return Button */
+.btn-return {
+    background-color: #fd5e42;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.btn-return:hover {
+    background-color: #c35427;
+}
+
+/* Success/Error Messages */
+.success {
+    color: green;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}

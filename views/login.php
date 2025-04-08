@@ -79,6 +79,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <p>Don't have an Account? <a href="register.php">Sign Up</a></p>
                     </div>
                 </form>
+
+                <!-- Admin Button -->
+                <div class="admin-action">
+                    <a href="admin_login.php" class="btn-admin">Admin</a>
+                </div>
             </div>
         </div>
     </div>
