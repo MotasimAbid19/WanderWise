@@ -40,3 +40,5 @@
     <!-- Footer Credit Section -->
     <div class="credit">Designed by <span class="designer">WanderWise Team</span> | All Rights Reserved.</div>
 </footer>
+
+<script src="//code.tidio.co/xmuado30yvynv0kqoae8nz4hel9rmbcr.js" async></script>
