@@ -58,9 +58,9 @@ form {
 }
 
 .card:hover {
-    transform: scale(1.05); /* Zoom effect on hover */
-    background: var(--tomato); /* Change background color on hover */
-    color: var(--black); /* Text color change on hover */
+    transform: scale(1.05);
+    background: var(--tomato);
+    color: var(--black); 
 }
 
 .card h4 {
@@ -109,17 +109,6 @@ button:hover, .btn:hover {
     transform: scale(1.05);
 }
 
-/* Animation for elements */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {

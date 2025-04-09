@@ -1,5 +1,5 @@
 <?php
-// Start the session if it's not already started
+// Start the session
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -31,26 +31,4 @@ if (session_status() == PHP_SESSION_NONE) {
         <?php endif; ?>
     </nav>
 
-    <!-- Mobile menu toggle button -->
-    <div id="menu-btn" class="fas fa-bars"></div>
 </header>
-
-
-<!-- Mobile Menu JavaScript -->
-<script>
-    // Get the mobile menu button and the navbar
-    const menuBtn = document.getElementById('menu-btn');
-    const navbar = document.querySelector('.header .navbar');
-
-    // Toggle the navbar when the menu button is clicked
-    menuBtn.onclick = () => {
-        menuBtn.classList.toggle('fa-times');  // Change icon to "X" on click
-        navbar.classList.toggle('active');  // Show the navbar
-    };
-
-    // Close navbar when scrolling (for mobile view)
-    window.onscroll = () => {
-        menuBtn.classList.remove('fa-times'); // Reset icon
-        navbar.classList.remove('active'); // Hide navbar
-    };
-</script>

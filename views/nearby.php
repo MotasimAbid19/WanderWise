@@ -16,21 +16,21 @@ include('../includes/header.php');
     <section class="nearby-hotels">
         <h3>Nearby Hotels</h3>
         <div class="card">
-            <img src="../assets/images/3_star_hotel.png" alt="Hotel 1">
+            <img src="../assets/images/3_star_hotel.png" alt="Hotel 1" loading="lazy">
             <h4>Beachside Resort</h4>
             <p>Experience a luxurious stay with beachfront views, modern amenities, and top-notch services.</p>
             <p>Price: ৳8000 per night</p>
             <a href="#" class="btn">View Details</a>
         </div>
         <div class="card">
-            <img src="../assets/images/4_star_hotel.png" alt="Hotel 2">
+            <img src="../assets/images/4_star_hotel.png" alt="Hotel 2" loading="lazy">
             <h4>Mountain View Hotel</h4>
             <p>Enjoy the serene atmosphere and breathtaking mountain views. Perfect for a relaxing getaway.</p>
             <p>Price: ৳12000 per night</p>
             <a href="#" class="btn">View Details</a>
         </div>
         <div class="card">
-            <img src="../assets/images/5_star_hotel.png" alt="Hotel 3">
+            <img src="../assets/images/5_star_hotel.png" alt="Hotel 3" loading="lazy">
             <h4>City Center Hotel</h4>
             <p>Located in the heart of the city, this hotel offers easy access to shopping, dining, and entertainment.</p>
             <p>Price: ৳20000 per night</p>
@@ -53,21 +53,21 @@ include('../includes/header.php');
     <section class="restaurants">
         <h3>Restaurants and Cafes</h3>
         <div class="card">
-            <img src="../assets/images/restaurant1.png" alt="Restaurant 1">
+            <img src="../assets/images/restaurant1.png" alt="Restaurant 1" loading="lazy">
             <h4>The Gourmet Kitchen</h4>
             <p>Indulge in exquisite cuisine with a mix of traditional and modern flavors.</p>
             <p>Price Range: ৳1000 - ৳3000</p>
             <a href="#" class="btn">View Details</a>
         </div>
         <div class="card">
-            <img src="../assets/images/rest2.jpg" alt="Restaurant 2">
+            <img src="../assets/images/rest2.jpg" alt="Restaurant 2" loading="lazy">
             <h4>Spice Garden</h4>
             <p>A fusion of Asian spices, with a cozy ambiance and a variety of vegetarian options.</p>
             <p>Price Range: ৳800 - ৳1500</p>
             <a href="#" class="btn">View Details</a>
         </div>
         <div class="card">
-            <img src="../assets/images/restaurant3.png" alt="Restaurant 3">
+            <img src="../assets/images/restaurant3.png" alt="Restaurant 3" loading="lazy"> 
             <h4>The Coffee Spot</h4>
             <p>Perfect place for a relaxed coffee break with a range of pastries and snacks.</p>
             <p>Price Range: ৳300 - ৳800</p>

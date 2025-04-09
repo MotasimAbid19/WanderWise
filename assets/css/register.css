@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #c5cee6; /* Matching the background color of the project */
+    background-color: #c5cee6; 
     color: #333;
     display: flex;
     flex-direction: column;
@@ -42,7 +42,7 @@ body {
 }
 /* Ensure placeholder text is visible */
 input::placeholder {
-    color: #999;  /* You can change the color as needed */
+    color: #999; 
     font-style: italic;
 }
 
@@ -87,7 +87,7 @@ input::placeholder {
 }
 
 .btn:hover {
-    background-color: #c35427; /* Darker shade of tomato on hover */
+    background-color: #c35427;
 }
 
 /* Error Message Styling */

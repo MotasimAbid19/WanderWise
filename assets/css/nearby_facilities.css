@@ -49,8 +49,8 @@ h3 {
 
 .card:hover {
     transform: scale(1.05);
-    background: var(--tomato); /* Change background color on hover */
-    color: var(--black); /* Text color change on hover */
+    background: var(--tomato); 
+    color: var(--black);
 }
 
 .card img {

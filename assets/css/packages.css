@@ -1,46 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
-
-:root {
-    --main-color: #c5cee6; /* Main color background */
-    --black: #222;
-    --white: #fff;
-    --tomato: #fd5e42;
-    --light-black: #777;
-    --light-white: rgba(255, 255, 255, 0.9);
-    --dark-bg: rgba(0,0,0,.7);
-    --light-bg: #eee;
-    --border: .1rem solid var(--main-color);
-    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
-    --text-shadow: 0 1.5rem 3rem rgba(0,0,0,.3);
-}
-
-* {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    text-decoration: none;
-}
 
 /* Packages Section */
 .packages {
     padding: 5rem 10%;
     text-align: center;
     background: var(--main-color); /* Matching home banner color */
-    color: var(--black); /* Set text color to black */
+    color: var(--black); 
 }
 
 /* Section Title */
 .packages h2 {
     font-size: 2.5rem;
-    color: var(--black); /* Ensure text color is black */
+    color: var(--black); 
     margin-bottom: 1rem;
 }
 
 .packages p {
     font-size: 1.4rem;
-    color: var(--light-black); /* Adjusted font color */
+    color: var(--light-black);
     max-width: 800px;
     margin: 0 auto 2rem;
 }
@@ -48,7 +24,7 @@
 /* Package List */
 .package-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Show 3 packages */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 2rem;
     margin-top: 2rem;
     justify-content: center;
@@ -81,20 +57,20 @@
 /* Hover Effect */
 .package:hover {
     transform: translateY(-10px);
-    background: var(--tomato); /* Change background color on hover */
-    color: var(--white); /* Text color change on hover */
+    background: var(--tomato);
+    color: var(--white); 
 }
 
 /* Change text color inside hovered card */
 .package:hover h3,
 .package:hover p {
-    color: var(--white); /* White text inside card when hovered */
+    color: var(--white); 
 }
 
 /* Cost Styling */
 .package p {
     font-size: 1.2rem; /* Smaller font size for cost */
-    color: var(--black); /* Black font color for cost */
+    color: var(--black); 
 }
 
 /* See More Packages Button */
@@ -117,7 +93,7 @@
 
 /* Package Page Background Color */
 body {
-    background-color: var(--main-color); /* Set background color for the package page */
+    background-color: var(--main-color); 
 }
 /* Search Bar Styling */
 .search-input {
@@ -162,7 +138,7 @@ body {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .package-list {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2 columns on smaller screens */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     }
     .packages h2 {
         font-size: 2.2rem;
@@ -177,7 +153,7 @@ body {
 
 @media (max-width: 768px) {
     .package-list {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 1 column on mobile */
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
     }
     .packages h2 {
         font-size: 2rem;

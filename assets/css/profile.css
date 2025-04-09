@@ -1,7 +1,7 @@
 /* General Styling for Profile Page */
 .profile {
     padding: 5rem 10%;
-    background-color: var(--main-color); /* Ensure this matches */
+    background-color: var(--main-color); 
     color: var(--black);
 }
 

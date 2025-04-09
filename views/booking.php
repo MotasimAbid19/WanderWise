@@ -3,19 +3,19 @@
 include('../includes/header.php');
 include('../config/db.php');
 
-// Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
-    echo "Please log in first.";
+    echo "Please log in first.<br>";
+    echo "Please log in first.<br>";
     exit();
 }
 
-$user_id = $_SESSION['user_id']; // Fetch the logged-in user's ID
+$user_id = $_SESSION['user_id']; // Fetch the logged-in user's ID(form database)
 
 // Fetch all packages from the database
 $sql = "SELECT * FROM packages";
 $result = $conn->query($sql);
 
-// Check if a booking_id is passed (for updating)
+// Check if a booking_id is passed
 if (isset($_GET['booking_id'])) {
     $booking_id = $_GET['booking_id'];
 
@@ -31,13 +31,13 @@ if (isset($_GET['booking_id'])) {
     }
 }
 
-// Handle form submission to update or create booking
+// Handle form submission to makre booking
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $package_id = $_POST['package_id'];
     $number_of_people = $_POST['number_of_people'];
     $travel_date = $_POST['travel_date'];
-    $hotel = $_POST['hotel'];  // Hotel selection
-    $car_rental = $_POST['car_rental'];  // Car rental selection
+    $hotel = $_POST['hotel']; 
+    $car_rental = $_POST['car_rental'];
 
     // Get the package details to calculate total cost
     $package_query = "SELECT price, name FROM packages WHERE id = $package_id";
@@ -94,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                            VALUES ('$user_id', '$package_id', '$number_of_people', '$travel_date', '$total_cost', '$hotel', '$car_rental')";
         
         if ($conn->query($insert_booking) === TRUE) {
-            $booking_id = $conn->insert_id; // Get the inserted booking ID
+            $booking_id = $conn->insert_id; // Get the insert booking ID
             // Redirect to total cost page with booking_id
             header("Location: total_cost.php?booking_id=$booking_id");
             exit();

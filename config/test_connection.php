@@ -1,6 +1,6 @@
 <?php
 // Include the database connection file
-include('db.php'); // As db.php is in the same folder.
+include('db.php');
 
 
 // Check if the connection was successful

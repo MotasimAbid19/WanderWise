@@ -62,7 +62,7 @@
     </div>
 </section>
 
-<!-- FAQs Section (Only 3 FAQs) -->
+<!-- FAQs Section -->
 <section class="faqs-home">
     <div class="container">
         <h2>Frequently Asked Questions</h2>

@@ -91,13 +91,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['confirm_booking'])) {
         <p><strong>Number of People:</strong> <?php echo $booking['number_of_people']; ?></p>
         <p><strong>Travel Date:</strong> <?php echo $booking['booking_date']; ?></p>
 
-        <!-- Display Hotel -->
         <p><strong>Hotel:</strong> <?php echo ucfirst($booking['hotel']); ?> (Price: ৳<?php echo number_format($hotel_price, 2); ?>)</p>
 
-        <!-- Display Car Rental -->
         <p><strong>Car Rental:</strong> <?php echo ucfirst($booking['car_rental']); ?> (Price: ৳<?php echo number_format($car_rental_price, 2); ?>)</p>
 
-        <!-- Display Total Cost -->
         <p><strong>Total Cost:</strong> ৳<?php echo number_format($total_cost, 2); ?></p>
     </div>
 

@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_package'])) {
     $price = $_POST['package_price'];
     $duration = $_POST['package_duration'];
     $location = $_POST['package_location'];
-    $image = $_POST['package_image']; // Assuming you are handling the image name
+    $image = $_POST['package_image']; 
 
     $insert_package = "INSERT INTO packages (name, description, price, duration, location, image) 
                        VALUES ('$name', '$description', '$price', '$duration', '$location', '$image')";

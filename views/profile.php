@@ -1,6 +1,6 @@
 <?php 
 include '../includes/header.php'; 
-// Fetching user information after checking if user is logged in
+// Fetching user information after checking if user is logged in(from database)
 include('../config/db.php');
 
 // Check if user is logged in
@@ -12,7 +12,7 @@ if (isset($_SESSION['user_id'])) {
     $result = $conn->query($query);
     $user = $result->fetch_assoc();
 } else {
-    header('Location: login.php'); // Redirect to login if not logged in
+    header('Location: login.php'); 
     exit();
 }
 ?>
@@ -27,7 +27,6 @@ if (isset($_SESSION['user_id'])) {
         <!-- User Profile -->
         <div class="profile-details">
             <div class="profile-picture">
-                <!-- Display user profile picture or default image -->
                 <img src="../assets/images/<?php echo $user['profile_picture']; ?>" alt="Profile Picture" loacding="lazy">
             </div>
 
@@ -61,7 +60,6 @@ if (isset($_SESSION['user_id'])) {
             </div>
         </div>
 
-        <!-- Button for updating profile -->
         <a href="update_profile.php" class="btn">Update Profile</a>
 
         <!-- User's Bookings -->

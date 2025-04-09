@@ -24,7 +24,7 @@ if (isset($_SESSION['user_id'])) {
         $first_name = $_POST['first_name'];
         $last_name = $_POST['last_name'];
         $password = $_POST['password'];
-        $image_path = null; // Default if no image is uploaded
+        $image_path = null; 
 
         // Validate Username for uniqueness (except for the current user)
         $username_query = "SELECT * FROM users WHERE username = '$username' AND id != '$user_id'";
@@ -51,7 +51,6 @@ if (isset($_SESSION['user_id'])) {
                 if (move_uploaded_file($image_tmp, $image_path)) {
                     // Profile picture upload successful
                 } else {
-                    // Handle error with image upload
                     echo "Error uploading image.";
                     exit();
                 }
@@ -76,7 +75,7 @@ if (isset($_SESSION['user_id'])) {
         }
     }
 } else {
-    header('Location: login.php'); // Redirect to login if not logged in
+    header('Location: login.php');
     exit();
 }
 ?>

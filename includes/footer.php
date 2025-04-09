@@ -41,4 +41,5 @@
     <div class="credit">Designed by <span class="designer">WanderWise Team</span> | All Rights Reserved.</div>
 </footer>
 
+<!-- Tidio Chat Script loaded asynchronously without blocking other resources -->
 <script src="//code.tidio.co/xmuado30yvynv0kqoae8nz4hel9rmbcr.js" async></script>

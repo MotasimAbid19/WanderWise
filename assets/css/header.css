@@ -1,7 +1,7 @@
 /* General Header Styling */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 :root {
-    --main-color: #c5cee6; /* Matching the theme color */
+    --main-color: #c5cee6; /* Main Website theme color */
     --black: #222;
     --white: #fff;
     --tomato: #fd5e42;
@@ -27,7 +27,7 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background: #c5cee6; /* Blueish background from logo */
+    background: #c5cee6; 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -36,21 +36,14 @@
     width: 100%;
 }
 
-/* Fix Header Overlap */
+/* Fix Header Overlap issues */
 body {
     padding-top: 90px; /* Adjust based on header height */
 }
 
-/* Header Scroll Effect */
-.header.scrolled {
-    background: #4A505D; /* Slightly darker on scroll */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
 /* Header Logo */
 .header .logo img {
-    height: 70px; /* Adjusted to fit well */
-    transition: transform 0.3s ease-in-out;
+    height: 70px; 
 }
 
 .header .logo img:hover {
@@ -67,25 +60,10 @@ body {
     font-size: 1.6rem;
     margin-left: 2rem;
     color: var(--black);
-    text-transform: uppercase;
-    transition: color 0.3s ease-in-out;
     text-decoration: none;
 }
 
 .header .navbar a:hover {
-    color: var(--tomato);
-}
-
-/* Mobile Menu Button */
-#menu-btn {
-    font-size: 2.2rem;
-    cursor: pointer;
-    color: var(--black);
-    display: none; /* Initially hidden */
-    transition: 0.3s ease-in-out;
-}
-
-#menu-btn:hover {
     color: var(--tomato);
 }
 
@@ -101,39 +79,13 @@ body {
 }
 
 @media (max-width: 768px) {
-    /* Show menu button on small screens */
     #menu-btn {
         display: inline-block; /* Make it visible on smaller screens */
     }
-
-    /* Hide navbar initially */
-    .header .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: #4A505D; /* Darker shade for mobile menu */
-        display: flex;
-        flex-direction: column;
-        padding: 2rem;
-        text-align: center;
-        transform: translateY(-100%); /* Initially hidden */
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    /* Show navbar when active */
-    .header .navbar.active {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
-    }
-
     .header .navbar a {
         margin: 1.5rem 0;
         font-size: 1.6rem;
         display: block;
-        color: var(--white);
+        color: var(--black);
     }
 }

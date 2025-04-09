@@ -19,9 +19,9 @@ const urlsToCache = [
     '/assets/js/service_worker.js',
     '/assets/js/validate_profile_update.js',
     '/assets/js/validate_register.js',
-    '/assets/images/logo.png',  // Make sure this file is placed in the correct folder
-    '/assets/images/background.jpg',  // Make sure this file is placed in the correct folder
-    '/assets/images/favicon.ico'  // Make sure this file is placed in the correct folder
+    '/assets/images/logo.png',  
+    '/assets/images/background.jpg', 
+    '/assets/images/favicon.ico' 
   ];
 
 // Install event to cache files

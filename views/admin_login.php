@@ -1,5 +1,4 @@
 <?php
-// Include header
 include('../includes/header.php');
 
 
@@ -7,8 +6,8 @@ include('../includes/header.php');
 //if (isset($_SESSION['admin_logged_in'])) {
 //    header("Location: admin_dashboard.php");
 //    exit();
-
 // Initialize variables to avoid warnings
+
 $username = '';
 $password = '';
 $error_message = '';
@@ -55,6 +54,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 
 <?php
-// Include footer
 include('../includes/footer.php');
 ?>
