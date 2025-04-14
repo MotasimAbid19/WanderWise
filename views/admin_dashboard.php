@@ -1,4 +1,7 @@
 <?php
+// Include Redis connection
+include('../predis/redis_connection.php');
+
 // Include database connection
 include('../config/db.php');
 
@@ -11,17 +14,86 @@ if (!isset($_SESSION['admin_logged_in'])) {
     exit();
 }
 
-// Fetch users from the database
-$sql_users = "SELECT * FROM users";
-$result_users = $conn->query($sql_users);
+// Fetch users from the database or from Redis cache
+$cache_key_users = 'users_list';
+$cached_users = $redis->get($cache_key_users);
 
-// Fetch bookings from the database
-$sql_bookings = "SELECT * FROM bookings";
-$result_bookings = $conn->query($sql_bookings);
+if ($cached_users) {
+    // Data is found in Redis, use the cached data
+    $users = json_decode($cached_users, true);
+    echo " User Data fetched from Redis cache! ";
+} else {
+    // Data not found in cache, fetch from the database
+    $sql_users = "SELECT * FROM users";
+    $result_users = $conn->query($sql_users);
+    
+    if ($result_users->num_rows > 0) {
+        $users = [];
+        while ($row = $result_users->fetch_assoc()) {
+            $users[] = $row;
+        }
 
-// Fetch packages from the database
-$sql_packages = "SELECT * FROM packages";
-$result_packages = $conn->query($sql_packages);
+        // Store the result in Redis for 1 hour (3600 seconds)
+        $redis->setex($cache_key_users, 3600, json_encode($users));
+        echo "User Data fetched from the database! ";
+    } else {
+        echo "<p>No users available. </p>";
+    }
+}
+
+// Fetch bookings from the database or from Redis cache
+$cache_key_bookings = 'bookings_list';
+$cached_bookings = $redis->get($cache_key_bookings);
+
+if ($cached_bookings) {
+    // Data is found in Redis, use the cached data
+    $bookings = json_decode($cached_bookings, true);
+    echo "Bookings Data fetched from Redis cache! ";
+} else {
+    // Data not found in cache, fetch from the database
+    $sql_bookings = "SELECT * FROM bookings";
+    $result_bookings = $conn->query($sql_bookings);
+
+    if ($result_bookings->num_rows > 0) {
+        $bookings = [];
+        while ($row = $result_bookings->fetch_assoc()) {
+            $bookings[] = $row;
+        }
+
+        // Store the result in Redis for 1 hour (3600 seconds)
+        $redis->setex($cache_key_bookings, 3600, json_encode($bookings));
+        echo "BookingsData fetched from the database! ";
+    } else {
+        echo "<p>No bookings available. </p>";
+    }
+}
+
+// Fetch packages from the database or from Redis cache
+$cache_key_packages = 'packages_list';
+$cached_packages = $redis->get($cache_key_packages);
+
+if ($cached_packages) {
+    // Data is found in Redis, use the cached data
+    $packages = json_decode($cached_packages, true);
+    echo "Packages Data fetched from Redis cache! ";
+} else {
+    // Data not found in cache, fetch from the database
+    $sql_packages = "SELECT * FROM packages";
+    $result_packages = $conn->query($sql_packages);
+
+    if ($result_packages->num_rows > 0) {
+        $packages = [];
+        while ($row = $result_packages->fetch_assoc()) {
+            $packages[] = $row;
+        }
+
+        // Store the result in Redis for 1 hour (3600 seconds)
+        $redis->setex($cache_key_packages, 3600, json_encode($packages));
+        echo "Packages Data fetched from the database! ";
+    } else {
+        echo "<p>No packages available. </p>";
+    }
+}
 
 // Handle package insert
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_package'])) {
@@ -36,6 +108,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_package'])) {
                        VALUES ('$name', '$description', '$price', '$duration', '$location', '$image')";
 
     if ($conn->query($insert_package) === TRUE) {
+        // Invalidate the packages cache
+        $redis->del($cache_key_packages);
         $success_message = "Package added successfully!";
     } else {
         $error_message = "Error adding package: " . $conn->error;
@@ -56,6 +130,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update_package'])) {
                        duration='$duration', location='$location', image='$image' WHERE id='$package_id'";
 
     if ($conn->query($update_package) === TRUE) {
+        // Invalidate the packages cache
+        $redis->del($cache_key_packages);
         $success_message = "Package updated successfully!";
     } else {
         $error_message = "Error updating package: " . $conn->error;
@@ -68,6 +144,8 @@ if (isset($_GET['delete_package'])) {
     $delete_package = "DELETE FROM packages WHERE id='$package_id'";
 
     if ($conn->query($delete_package) === TRUE) {
+        // Invalidate the packages cache
+        $redis->del($cache_key_packages);
         $success_message = "Package deleted successfully!";
     } else {
         $error_message = "Error deleting package: " . $conn->error;
@@ -100,7 +178,7 @@ if (isset($_GET['delete_package'])) {
                 </tr>
             </thead>
             <tbody>
-                <?php while ($row = $result_users->fetch_assoc()) { ?>
+                <?php foreach ($users as $row) { ?>
                     <tr>
                         <td><?php echo $row['id']; ?></td>
                         <td><?php echo $row['username']; ?></td>
@@ -125,7 +203,7 @@ if (isset($_GET['delete_package'])) {
                 </tr>
             </thead>
             <tbody>
-                <?php while ($row = $result_bookings->fetch_assoc()) { ?>
+                <?php foreach ($bookings as $row) { ?>
                     <tr>
                         <td><?php echo $row['id']; ?></td>
                         <td><?php echo $row['user_id']; ?></td>
@@ -178,7 +256,7 @@ if (isset($_GET['delete_package'])) {
                 </tr>
             </thead>
             <tbody>
-                <?php while ($row = $result_packages->fetch_assoc()) { ?>
+                <?php foreach ($packages as $row) { ?>
                     <tr>
                         <td><?php echo $row['id']; ?></td>
                         <td><?php echo $row['name']; ?></td>
