@@ -1,8 +1,6 @@
 <?php
-// Include the database connection
 include('../config/db.php');
 
-// Start the session
 session_start();
 
 // Initialize error message variable
@@ -10,37 +8,48 @@ $error_message = '';
 
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Get form data
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    // Sanitize and validate email input
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
-    // Query to fetch the user from the database
-    $query = "SELECT * FROM users WHERE email = '$email'";
-    $result = $conn->query($query);
-
-    if ($result->num_rows > 0) {
-        // User found, verify password
-        $user = $result->fetch_assoc();
-        if (password_verify($password, $user['password'])) {
-            // Password is correct, start the session
-            $_SESSION['user_id'] = $user['id'];
-            $_SESSION['username'] = $user['username'];
-
-            // Redirect to the home page (or another page)
-            header('Location: home.php');  // Ensure redirection is to the home page or wherever you want
-            exit();
-        } else {
-            // Incorrect password message
-            $error_message = "Password is wrong. Please try again.";
-        }
+    // Validate email format
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error_message = "Invalid email format.";
     } else {
-        // No user found with that email
-        $error_message = "No user found with that email.";
+        // Get the password from the form
+        $password = $_POST['password'];
+
+        // Prepare the SQL statement to prevent SQL injection
+        $stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
+        $stmt->bind_param("s", $email);
+
+        // Execute the prepared statement
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            // User found, verify the password
+            $user = $result->fetch_assoc();
+            if (password_verify($password, $user['password'])) {
+                // Password is correct, start the session
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['username'] = $user['username'];
+
+                
+                header('Location: home.php');  
+                exit();
+            } else {
+                $error_message = "Password is wrong. Please try again.";
+            }
+        } else {
+            $error_message = "No user found with that email.";
+        }
+
+        // Close the prepared statement
+        $stmt->close();
     }
 }
 ?>
 
-<!-- Include the header (without session_start here) -->
 <?php include('../includes/header.php'); ?>
 <link rel="stylesheet" href="../assets/css/login.css">
 
@@ -61,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <input type="password" name="password" id="password" placeholder="Password" required>
                     </div>
 
-                    <!-- Error Messages (if any) -->
+                    <!-- Error Messages-->
                     <?php if ($error_message != '') { ?>
                         <div class="error-message">
                             <p style="color: red;"><?php echo $error_message; ?></p>
